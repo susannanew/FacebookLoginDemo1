@@ -21,16 +21,13 @@ class MainActivity : AppCompatActivity() {
        callback= CallbackManager.Factory.create()
         loginButton.registerCallback(callback, object :FacebookCallback<LoginResult>{
             override fun onCancel() {
-                TODO("Not yet implemented")
                 textView.text =" login canceled"
             }
 
             override fun onError(error: FacebookException) {
-                TODO("Not yet implemented")
             }
 
             override fun onSuccess(result: LoginResult) {
-                TODO("Not yet implemented")
                 textView.text= "Login Success${result?.accessToken?.userId}"+
                         "${result?.accessToken?.token}"
             }
